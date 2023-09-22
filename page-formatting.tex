@@ -1,0 +1,147 @@
+% Packages
+\usepackage{graphicx} % Required for inserting images
+\usepackage{libertine}
+\usepackage{libertinust1math}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage[table, svgnames]{xcolor}
+
+% Top Profile
+\newcommand{\createHeader}{
+\hspace{-0.5cm}
+\begin{minipage}[t]{0.5\textwidth} 
+\begin{flushleft}
+\huge \textbf{\authorName} \\
+\vspace{2pt}
+\normalsize \universityName \\
+\normalsize \DepartmentName \\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{flushright}
+\huge \textbf{Contact} \\
+\vspace{2pt}
+\normalsize \hyperlink{mailto:\authorEmail}{\authorEmail} \\
+\normalsize \hyperlink{\authorWebsite}{\authorWebsite} \\
+\end{flushright}
+\end{minipage}
+}
+
+% Section Formatting
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection.}{1em}{}[{\titlerule[0.2pt]}]
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\itshape}{\thesubsubsection.}{1em}{}
+
+% Margins
+\addtolength{\oddsidemargin}{-.875in}
+\addtolength{\evensidemargin}{-.875in}
+\addtolength{\textwidth}{1.75in}
+\addtolength{\topmargin}{-.875in}
+\addtolength{\textheight}{1.75in}
+
+% Section Line Break
+\newcommand{\lineBreak}{\par\noindent\rule{\textwidth}{0.5pt}}
+
+% New Degree
+\newcommand{\newDegree}[5]{
+\begin{minipage}[t]{0.15\textwidth}
+\small (#5)
+\end{minipage}
+\begin{minipage}[t]{0.85\textwidth} 
+\textbf{#1} \\
+\small #2 \\
+\small Advised by #3\\
+\small Working on \textit{#4}
+\vspace*{5pt}
+\end{minipage}}
+
+% New Degree (Short)
+\newcommand{\newDegreeShort}[3]{
+\begin{minipage}[t]{0.15\textwidth}
+\small (#3)
+\end{minipage}
+\begin{minipage}[t]{0.85\textwidth} 
+\textbf{#1} \\
+\small #2
+\vspace*{5pt}
+\end{minipage}}
+
+% New Work
+\newcommand{\newWork}[3]{
+\begin{minipage}[t]{0.15\textwidth}
+\small (#1)
+\end{minipage}
+\begin{minipage}[t]{0.85\textwidth} 
+\textbf{#2} \\
+\small #3
+\vspace*{5pt}
+\end{minipage}}
+
+% New Paper
+\newcommand{\newPaper}[2]{
+\begin{minipage}[t]{0.1\textwidth}
+\small (#1)
+\end{minipage}
+\begin{minipage}[t]{0.9\textwidth} 
+\small #2
+\vspace*{5pt}
+\end{minipage}}
+
+% New Service
+\newcommand{\newService}[3]{
+\begin{minipage}[t]{0.075\textwidth}
+\small (#1)
+\end{minipage}
+\begin{minipage}[t]{0.125\textwidth}
+\small \textbf{#2}
+\end{minipage}
+\begin{minipage}[t]{0.8\textwidth} 
+\small #3
+\vspace*{5pt}
+\end{minipage}}
+
+% New Teaching
+\newcommand{\newTeaching}[3]{
+\begin{minipage}[t]{0.075\textwidth}
+\small (#1)
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+\small \textbf{#2}
+\end{minipage}
+\begin{minipage}[t]{0.725\textwidth} 
+\small #3
+\vspace*{5pt}
+\end{minipage}}
+
+% New Talk
+\newcommand{\newTalk}[3]{
+\begin{minipage}[t]{0.075\textwidth}
+\small (#1)
+\end{minipage}
+\begin{minipage}[t]{0.125\textwidth}
+\small \textbf{#2}
+\end{minipage}
+\begin{minipage}[t]{0.8\textwidth} 
+\small #3
+\vspace*{5pt}
+\end{minipage}}
+
+% New Award
+% New Teaching
+\newcommand{\newAward}[3]{
+\begin{minipage}[t]{0.075\textwidth}
+\small (#1)
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+\small \textbf{#2}
+\end{minipage}
+\begin{minipage}[t]{0.625\textwidth} 
+\small #3
+\vspace*{5pt}
+\end{minipage}}
