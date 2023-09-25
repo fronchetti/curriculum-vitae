@@ -1,15 +1,27 @@
 % Packages
 \usepackage{graphicx} % Required for inserting images
-\usepackage{libertine}
-\usepackage{libertinust1math}
-\usepackage[T1]{fontenc}
+\usepackage{libertine}  % Font Family
+\usepackage{libertinust1math} % Font Family
+\usepackage[T1]{fontenc} % Font Family
 \usepackage{titlesec}
-\usepackage{fontawesome5}
 \usepackage[hidelinks]{hyperref}
-\usepackage{graphicx}
 \usepackage[table, svgnames]{xcolor}
+\usepackage{fancyhdr} % Custom Foot and Header
+\usepackage{datetime}
+\usepackage[export]{adjustbox}
 
-% Top Profile
+% Month, Year (DateTime)
+\newdateformat{monthandyear}{\monthname[\THEMONTH], \THEYEAR}
+
+% Footer Style
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{}
+\cfoot{\small\makebox[\textwidth][c]{\thepage}}
+\rfoot{\small\makebox[\textwidth][r]{\monthandyear\today}}
+
+% Name, Department and Contact
 \newcommand{\createHeader}{
 \hspace{-0.5cm}
 \begin{minipage}[t]{0.5\textwidth} 
@@ -25,16 +37,15 @@
 \huge \textbf{Contact} \\
 \vspace{2pt}
 \normalsize \hyperlink{mailto:\authorEmail}{\authorEmail} \\
-\normalsize \hyperlink{\authorWebsite}{\authorWebsite} \\
+\normalsize \authorPhone \\
 \end{flushright}
 \end{minipage}
 }
 
-% Section Formatting
+% Section Title Formatting
 \titleformat{\section}
   {\normalfont\Large\bfseries}{\thesection.}{1em}{}[{\titlerule[0.2pt]}]
-\titleformat{\subsection}
-  {\normalfont\large\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\rlap{\color{gray!10}\rule[-0.2cm]{\linewidth}{0.6cm}} \thesubsection.}{1em}{}
 \titleformat{\subsubsection}
   {\normalfont\normalsize\itshape}{\thesubsubsection.}{1em}{}
 
@@ -48,7 +59,7 @@
 % Section Line Break
 \newcommand{\lineBreak}{\par\noindent\rule{\textwidth}{0.5pt}}
 
-% New Degree
+% Degree Command
 \newcommand{\newDegree}[5]{
 \begin{minipage}[t]{0.15\textwidth}
 \small (#5)
@@ -61,7 +72,7 @@
 \vspace*{5pt}
 \end{minipage}}
 
-% New Degree (Short)
+% Degree Command (Short)
 \newcommand{\newDegreeShort}[3]{
 \begin{minipage}[t]{0.15\textwidth}
 \small (#3)
@@ -72,7 +83,7 @@
 \vspace*{5pt}
 \end{minipage}}
 
-% New Work
+% Work Command
 \newcommand{\newWork}[3]{
 \begin{minipage}[t]{0.15\textwidth}
 \small (#1)
@@ -83,7 +94,7 @@
 \vspace*{5pt}
 \end{minipage}}
 
-% New Paper
+% Paper Command
 \newcommand{\newPaper}[2]{
 \begin{minipage}[t]{0.1\textwidth}
 \small (#1)
@@ -93,7 +104,7 @@
 \vspace*{5pt}
 \end{minipage}}
 
-% New Service
+% Service Command
 \newcommand{\newService}[3]{
 \begin{minipage}[t]{0.075\textwidth}
 \small (#1)
@@ -106,7 +117,7 @@
 \vspace*{5pt}
 \end{minipage}}
 
-% New Teaching
+% Teaching Command
 \newcommand{\newTeaching}[3]{
 \begin{minipage}[t]{0.075\textwidth}
 \small (#1)
@@ -119,7 +130,7 @@
 \vspace*{5pt}
 \end{minipage}}
 
-% New Talk
+% Talk Command
 \newcommand{\newTalk}[3]{
 \begin{minipage}[t]{0.075\textwidth}
 \small (#1)
@@ -132,7 +143,7 @@
 \vspace*{5pt}
 \end{minipage}}
 
-% New Award
+% Award Command
 \newcommand{\newAward}[3]{
 \begin{minipage}[t]{0.075\textwidth}
 \small (#1)
@@ -145,8 +156,16 @@
 \vspace*{5pt}
 \end{minipage}}
 
+% Reference Command
 \newcommand{\newReference}[1]{
 \begin{minipage}[t]{\textwidth}
+\small #1
+\vspace*{5pt}
+\end{minipage}}
+
+% Projects Command
+\newcommand{\newProject}[1]{
+\begin{minipage}[c]{\textwidth}
 \small #1
 \vspace*{5pt}
 \end{minipage}}

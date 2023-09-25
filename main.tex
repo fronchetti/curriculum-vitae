@@ -1,3 +1,5 @@
+% I built this custom template inspired by Dr. Marco Gerosa's elegant CV.
+% I am not an expert in LaTeX, so feel free to adjust it.
 \documentclass[10pt]{extarticle}
 
 % Settings file
@@ -7,11 +9,10 @@
 \def\universityName{Virginia Commonwealth University}
 \def\DepartmentName{Department of Computer Science}
 \def\authorEmail{fronchettl@vcu.edu}
-\def\authorWebsite{https://fron.ch/}
-
+\def\authorPhone{+1 804 298 0694}
+  
 \begin{document}
 \createHeader
-
 \section{Summary}
 \small Fronchetti is a Ph.D. Student in Computer Science at Virginia Commonwealth University, USA. Currently working on the intersection between Software Engineering (SE) and Human-Robot Interaction (HRI). His work focuses on the development of programming tools to support end-users in industrial robotics. Previously, he also researched topics related to the open-source development context, including but not limited to the integration of newcomers in open-source projects and the benefits of social coding platforms. With more than 7 years of experience in research, his work resulted in 17 papers published in top-tier journals and conferences, including ICSE, TSE, EMSE, and FSE (citations: 206, h-index: 9). He also contributed as a committee member for MSR and RoPES and was the web chair of the DREE workshop.
 
@@ -89,8 +90,9 @@
 \newService{2020}{Session Chair}{International Conference on Global Software Engineering (ICGSE)}
 
 \section{Talks}
-\newTalk{2022}{Speaker}{Is robot programming for everyone? A study about end-users in robotics.\\ College of William \& Mary, Virginia, USA.}
+\newTalk{2022}{Speaker}{Is robot programming for everyone? A study about end-users in robotics.\\ College of William \& Mary (W\&M), Virginia, USA.}
 \newTalk{2022}{Speaker}{Talking with robots: Why is it so tricky, and how can we improve it?\\ Full Steam Ahead Middle School Conference, Virginia, USA.}.
+\newTalk{2021}{Speaker}{Mining and learning from software repositories with GitHub API\\ Federal University of Technology - Paraná (UTFPR), Paraná, Brazil.}.
 
 \section{Teaching}
 \newTeaching{2023}{Instructor}{Introduction to Mixed Reality and Industrial Robotics (10 hours).\\ Software Engineering Hands-On Day. Virginia Commonwealth University.}
@@ -102,9 +104,30 @@
 
 \section{Awards}
 \newAward{2021}{Best Paper Award (Runner Up)}{Journal of Computer Languages (COLA)}
+\newAward{2018}{Research Scholarship}{São Paulo Research Foundation (FAPESP)}
 \newAward{2017}{Best Paper Award}{V Workshop on Software Visualization, Evolution and Maintenance (VEM)}
+\newAward{2015}{Research Scholarship}{Brazilian National Council for Scientific and Technological Development (CNPq)}
+
 
 \section{Projects}
+\newProject{\textbf{Mista: A tool to manually control robots in mixed reality}\\
+Role: Project Manager, Developer.\\
+Source: https://github.com/vcuse/mista\\
+Funding: NSF (Award \#2024561)}
+%
+\newProject{
+\textbf{Duplo: A block-based language for two-armed robots}\\
+Role: Project Manager, Developer.\\
+Website: \href{https://se.lab.vcu.edu/research/robotics}{https://se.lab.vcu.edu/research/robotics}\\
+Source: \href{https://github.com/fronchetti/ICSE-2024}{https://github.com/fronchetti/ICSE-2024}\\
+Funding: NSF (Award \#2024561)}
+%
+\newProject{
+\textbf{Contributing.info: A tool to identify newcomer-related information in OSS projects}\\
+Role: Sole Developer.\\
+Website: \href{https://contributing.streamlit.app/}{https://contributing.streamlit.app/}\\
+Source: \href{https://github.com/fronchetti/FSE-2023}{https://github.com/fronchetti/FSE-2023}\\
+Funding: FAPESP (Award \#2018/02596-1)}
 
 \section{References}
 \newReference{
@@ -122,9 +145,9 @@ Associate Professor at Virginia Commonwealth University\\
 
 \section{Additional Information}
 \small
-\textbf{Google Scholar:} \url{https://scholar.google.com/citations?user=-6jIjG8AAAAJ&hl}\\
-\textbf{LinkedIn:} \url{https://www.linkedin.com/in/fronchat/}\\
-\textbf{GitHub:} \url{https://github.com/fronchetti}\\
-\textbf{Twitter:} \url{https://twitter.com/fronchat}\\
-\textbf{Website:} \url{https://fron.ch/}
+\textbf{Google Scholar:} \href{https://scholar.google.com/citations?user=-6jIjG8AAAAJ&hl}{https://scholar.google.com/citations?user=-6jIjG8AAAAJ\&hl}\\
+\textbf{LinkedIn:} \href{https://www.linkedin.com/in/fronchat}{https://www.linkedin.com/in/fronchat}\\
+\textbf{GitHub:} \href{https://github.com/fronchetti}{https://github.com/fronchetti}\\
+\textbf{Twitter:} \href{https://twitter.com/fronchat}{https://twitter.com/fronchat}\\
+\textbf{Website:} \href{https://fron.ch/}{https://fron.ch}
 \end{document}
